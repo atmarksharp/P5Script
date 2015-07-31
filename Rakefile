@@ -3,13 +3,14 @@ JAVAC = "javac"
 GROOVYC = "groovyc"
 GROOVY = "groovy"
 MAIN = "src/P5Script"
+CLASSPATH = ".:./lib"
 
 task :build do
-  sh "#{GROOVYC} #{MAIN}.groovy"
+  sh "#{GROOVYC} -cp #{CLASSPATH} #{MAIN}.groovy"
 end
 
 task :run do
-  sh "#{GROOVY} #{MAIN}.groovy"
+  sh "#{GROOVY} -cp #{CLASSPATH} #{MAIN}.groovy"
 end
 
 task :clean do
