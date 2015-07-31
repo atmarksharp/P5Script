@@ -1,7 +1,9 @@
+package p5sc
+
 import processing.core.*
 
-class P5Script {
-    static void main (String[] args){
-        println("Hello, world");
-    }
+public class P5Script {
+  public void hello(){
+    println("hello");
+  }
 }
